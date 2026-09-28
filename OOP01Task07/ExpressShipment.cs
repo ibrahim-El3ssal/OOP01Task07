@@ -38,12 +38,8 @@ namespace OOP01Task07
         public override void PrintShipment()
         {
             Console.WriteLine("Express Shipment\n");
-            Console.WriteLine($"Tracking Code : {TrackingCode}");
-            Console.WriteLine($"Description   : {Description}");
-            Console.WriteLine($"Weight        : {Weight} KG");
-            Console.WriteLine($"Delivery Fee  : {DeliveryFee} EGP");
+            base.PrintShipment(); 
             Console.WriteLine($"Extra Fee     : {ExtraFee} EGP");
-            Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
             Console.WriteLine("--------------------------------------------------");
         }
 

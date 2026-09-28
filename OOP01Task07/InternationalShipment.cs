@@ -46,16 +46,12 @@ namespace OOP01Task07
             CustomsFee = customsFee;
         }
 
-        public void PrintShipment()
+        public override void PrintShipment()
         {
             Console.WriteLine("International Shipment\n");
-            Console.WriteLine($"Tracking Code       : {TrackingCode}");
-            Console.WriteLine($"Description         : {Description}");
-            Console.WriteLine($"Weight              : {Weight} KG");
-            Console.WriteLine($"Delivery Fee        : {DeliveryFee} EGP");
+            base.PrintShipment(); 
             Console.WriteLine($"Destination Country : {DestinationCountry}");
             Console.WriteLine($"Customs Fee         : {CustomsFee} EGP");
-            Console.WriteLine($"Estimated Cost      : {EstimatedCost} EGP");
             Console.WriteLine("--------------------------------------------------");
         }
     }
