@@ -49,9 +49,15 @@ namespace OOP01Task07
         public override void PrintShipment()
         {
             Console.WriteLine("International Shipment\n");
-            base.PrintShipment(); 
+            //base.PrintShipment();
+            Console.WriteLine($"Tracking Code : {TrackingCode}");
+            Console.WriteLine($"Description   : {Description}");
+            Console.WriteLine($"Weight        : {Weight} KG");
+            Console.WriteLine($"Delivery Fee  : {DeliveryFee} EGP");
             Console.WriteLine($"Destination Country : {DestinationCountry}");
             Console.WriteLine($"Customs Fee         : {CustomsFee} EGP");
+            Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
+            
             Console.WriteLine("--------------------------------------------------");
         }
     }

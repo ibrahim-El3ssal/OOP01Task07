@@ -86,8 +86,11 @@ namespace OOP01Task07
         public void PrintAllShipments()
         {
             Console.WriteLine("==================================================");
-            Console.WriteLine($"Delivery Center : {CenterName}");
+            Console.WriteLine($"Delivery Center ");
             Console.WriteLine("==================================================");
+            Console.WriteLine($"Driver : {AssignedDriver.Name}");
+            Console.WriteLine("==================================================");
+
 
             if (_shipments != null)
             {

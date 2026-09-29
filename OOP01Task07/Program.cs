@@ -65,9 +65,8 @@
             center.AddShipment(expressShipment);
             center.AddShipment(internationalShipment);
 
-            // h. Print all shipments using PrintAllShipments()
+            //// h. Print all shipments using PrintAllShipments()
             center.PrintAllShipments();
-
 
             // i. Call DeliveryHelper.PrintShipmentDetails() for each shipment
             Console.WriteLine("\n--- Printing Using DeliveryHelper... ---");
@@ -77,7 +76,7 @@
 
             // j. Demonstrate both versions of UpdateWeight()
             Console.WriteLine("Updating Weight...\n");
-            Console.WriteLine($"Original Weight : {standardShipment.Weight} KG");
+            Console.WriteLine($"Original Weight : {standardShipment.Weight} KG"); //3
 
             standardShipment.UpdateWeight(5.0);
             Console.WriteLine($"Updated Weight : {standardShipment.Weight} KG");
@@ -90,14 +89,8 @@
             // k. Build a Shipment[] holding mixed types and print all of them in a loop
             Console.WriteLine("Printing Using Shipment[]...\n");
 
-            
             Shipment[] mixedShipments = new Shipment[]
-            {
-    standardShipment,
-    expressShipment,
-    internationalShipment
-            };
-
+            { standardShipment,  expressShipment,internationalShipment };
             foreach (Shipment shipment in mixedShipments)
             {
                 if (shipment is StandardShipment)
@@ -113,7 +106,6 @@
                     Console.WriteLine("International Shipment...\n");
                 }
             }
-
             Console.WriteLine("==============================================");
             #endregion
             Console.ReadLine();
