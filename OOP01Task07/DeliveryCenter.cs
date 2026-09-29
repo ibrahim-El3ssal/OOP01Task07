@@ -8,6 +8,7 @@ namespace OOP01Task07
     internal class DeliveryCenter
     {
         public string CenterName { get; set; }
+        public Driver AssignedDriver { get; set; }
         private Shipment[] _shipments;
 
         //ctor
@@ -94,13 +95,7 @@ namespace OOP01Task07
                 {
                     if (_shipments[i] != null)
                     {
-                        // استدعاء دالة الطباعة الخاصة بكل كلاس
-                        if (_shipments[i] is StandardShipment std) std.PrintShipment();
-                        else if (_shipments[i] is ExpressShipment exp) exp.PrintShipment();
-                        else if (_shipments[i] is InternationalShipment @int) @int.PrintShipment();
-                        else _shipments[i].PrintShipment();
-
-                        Console.WriteLine();
+                        _shipments[i].PrintShipment();
                     }
                 }
             }
